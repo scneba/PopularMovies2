@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="api_key" translatable="false">getApiKeyFromTheMovie</string>
+    <string name="base_url" translatable="false">api.themoviedb.org</string>
+    <string name="image_base_url">http://image.tmdb.org/t/p/w185/</string>
+    <string name="scheme" translatable="false">https</string>
+    <string name="youtube_base_url" translatable="false">https://www.youtube.com/watch?v=</string>
+
+    <string name="noint">There seem to be no internet connection on this device.</string>
+    <string name="connectiontimeout">We are unable to get movies  due to a connection timeout</string>
+
+    <string name="unable_trailers">We are unable to get movie trailers  due to a connection timeout</string>
+
+    <string name="unabletoconnect">Unable to connect to server</string>
+    <string name="cancel">Cancel</string>
+    <string name="reload">Reload</string>
+    <string name="message">Message</string>
+    <string name="add_to_favourite">Add to Favourite Movies</string>
+    <string name="remove_fav">Remove from favourite</string>
+
+    <string name="todo">To be implemented</string>
+    <string name="url_redirect_done">There was an url redirect</string>
+  <string name="successfav">Movie successfully added to favourite</string>
+    <string name="removedfav">Movie successfully removed from favorite</string>
+    <string name="unableToInsert">Unable to insert to favorite</string>
+
+
+    <string name="popularMovies">Popular Movies</string>
+    <string name="topMovies">Top Movies</string>
+    <string name="favorite">Favorite Movies</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="nofavorite">No Favorite Movie has been added</string>
+
+    <string name="viewccomments">See reviews of Viewers </string>
+    <string name="comments">Reviews </string>
+    <string name="trailers">Trailers: </string>
+    <string name="noreviews">Not reviews available for this movie</string>
+
+
+    <!-- Content descriptions-->
+    <string name="cdTitle">Movie Title</string>
+    <string name="cdMoviePoster">Movie Poster</string>
+    <string name="cdAddToFav">Add or Remove movie from Favorite</string>
+</resources>

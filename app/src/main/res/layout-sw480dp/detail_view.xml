@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.clasence.neba.popularmovies.DetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+
+            >
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"
+                tools:layout_editor_absoluteX="180dp"
+                tools:layout_editor_absoluteY="81dp" />
+
+            <TextView
+                android:id="@+id/movietitle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@color/titleColor"
+                android:contentDescription="@string/cdTitle"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Despicable Me" />
+
+            <ImageView
+                android:id="@+id/imagePoster"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+
+                android:contentDescription="@string/cdMoviePoster"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/movietitle"
+                app:srcCompat="@android:drawable/stat_sys_phone_call_on_hold" />
+
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="8dp"
+                android:gravity="left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="30sp"
+
+                app:layout_constraintHorizontal_bias="0.543"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imagePoster"
+                tools:text="2017/12/19" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="14dp"
+                android:gravity="left"
+                android:textSize="25sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/release_date"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/release_date"
+                tools:text="5.3/10" />
+
+            <Button
+                android:id="@+id/btnAddToFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="@string/add_to_favourite"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/rating"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+            <TextView
+                android:id="@+id/synopsis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="13dp"
+
+                android:textSize="14sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/imagePoster"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagePoster"
+                tools:text="soneofn soneon sone eon donesoneofn soneon sone eon done soneofn soneon sone eon done" />
+
+
+            <TextView
+
+                android:id="@+id/tvtrailer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/trailers"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/imagePoster"
+                app:layout_constraintTop_toBottomOf="@+id/synopsis" />
+
+            <LinearLayout
+                android:id="@+id/trailerListView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp"
+
+                android:divider="@android:color/black"
+                android:dividerHeight="1dp"
+                android:orientation="vertical"
+                android:background="@color/colorWhite2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/imagePoster"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvtrailer"></LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnViewComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/viewccomments"
+                android:background="@drawable/button_selector"
+                android:textColor="@color/colorWhite"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/trailerListView"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                android:contentDescription="@string/viewccomments"
+                android:focusable="true"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/trailerProgress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:indeterminate="false"
+                android:visibility="gone"
+
+                app:layout_constraintLeft_toLeftOf="@+id/guideline"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/btnViewComments"
+                />
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
